@@ -109,6 +109,7 @@ public class C0724_09 {
 						case 0: 
 							System.out.println("점수변경을 취소했습니다.");
 							break;
+							
 						}
 						
 						temp=1;	// 학생 존재
