@@ -33,7 +33,7 @@ public class C0725_01 {
 			
 		float f = 1.0f;	// 접미사 f,F 를 꼭 붙여야한다
 		float f_2 = 1.1234567123f;	// 소수점 8자리까지 유효성 인정
-		System.out.println(f_2);
+//		System.out.println(f_2);
 		
 		double g = 1.0d;
 		double g_2 = 1.0;	// 접미사 생략가능
@@ -52,7 +52,35 @@ public class C0725_01 {
 		String s_4 = "abc"; // 가능
 		
 		int s_5 = 10;
-		String s_6 = ""+s_5;
+		String s_6 = ""+s_5;	// 문자열 타입으로 변경하는 방법
+		String s_7 = "5";
+		String s_8 = "100";
+		// 문자열 + 문자열 = 뒤에 문자열이 붙이는 방법 계산됨
+		// -,*,/ 안됨
+//		System.out.println(s_7+s_8);	// "5"+"100" = "5100"
+		int s_9 = Integer.parseInt(s_7);	// 문자열 ->int타입 변경
+		double s_10 = Double.parseDouble(s_8);	// 문자열 -> double 타입 변경
+		
+		// 문자열에서 1개 문자를 분리
+		String s_11 = "홍길동";
+		char s_12 = s_11.charAt(0);
+		
+		// 문자열 비교 - equals()
+		String s_13 = "10"; 
+		String s_14 = new String("10");
+		if(s_13==s_14) {
+			System.out.println("같다");
+		}else {
+			System.out.println("다르다");
+		}
+		
+		if(s_13.equals(s_14)) {
+			System.out.println("같다");
+		}else {
+			System.out.println("다르다");
+		}
+		
+		
 		
 		// 문자열 + 7가지 연산 => 문자열로 변경됨
 		System.out.println(""+1);	// 문자열
