@@ -80,7 +80,7 @@ public class C0725_10 {
 				int temp = 0;
 				
 				for(int i=0;i<count;i++) {
-					if(search.equals(name[i])) {
+					if(search.contains(name[i])) {
 						System.out.printf("%s 학생을 찾았습니다. 수정하려는 과목번호를 선택해주세요\n",name[i]);
 						System.out.println();
 						System.out.println("1.국어");
