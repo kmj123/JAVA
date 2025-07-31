@@ -4,10 +4,10 @@ import java.util.Scanner;
 public class StuMain {
 
 	public static void main(String[] args) {
-		// 상단출력 메소드
-		Studeck	stuDeck = new Studeck();
 		Scanner scan = new Scanner(System.in);
 		ArrayList list = new ArrayList();
+		// 객체선언
+		Studeck	stuDeck = new Studeck();
 
 		while(true) {
 			// 상단메뉴 출력 메소드
