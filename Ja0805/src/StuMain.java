@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.Reader;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class StuMain {
@@ -14,7 +15,7 @@ public class StuMain {
 		Scanner scan = new Scanner(System.in);
 		StuDeck stuDeck = new StuDeck();
 		ArrayList<Student> list = new ArrayList<Student>();
-		int no=0,kor=0,eng=0,math=0,total=0,rank=0;
+		int no=0,kor=0,eng=0,math=0,total=0,rank=0, temp = 0;
 		double avg = 0;
 		String name = "";
 		String[] title = {
@@ -35,11 +36,26 @@ public class StuMain {
 			case 2: //학생성적출력
 				stuDeck.stu_output(list);
 				break;
-			case 3:
-				
+			case 3: // 학생성적 수정
+				stuDeck.stu_update(list);
+				break;
+			case 4: // 학생성적 사게
+				stuDeck.stu_delete(list);
+				break;
+			case 5:	// 등수처리
+				stuDeck.stu_rank(list);
+				break;
+			case 6:	// 이름정렬
+				stuDeck.sort_name(list);
+				break;
+			case 7:	// 합계정렬
+				stuDeck.sort_total(list);
+				break;
+			case 8:	// 번호 정렬
+				stuDeck.sort_number(list);
 				break;
 				
-			case 7: //파일저장
+			case 9: //파일저장 - true:이어쓰기, false:덮어쓰기
 				stuDeck.stu_fileWrite(list);
 				
 				break;

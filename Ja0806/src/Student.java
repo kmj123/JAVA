@@ -1,7 +1,7 @@
 
 public class Student {
-	static int count;
 	private int no;
+	static int count;
 	private String name;
 	private int kor;
 	private int eng;
@@ -10,9 +10,12 @@ public class Student {
 	private double avg;
 	private int rank;
 	
-	{no = ++count;}
+	{
+		no = ++count;
+	}
+	
 	Student(){}
-	Student(String name,int kor,int eng,int math){
+	Student(String name,int kor, int eng, int math){
 		this.name = name;
 		this.kor = kor;
 		this.eng = eng;
@@ -20,8 +23,7 @@ public class Student {
 		this.total = kor+eng+math;
 		this.avg = this.total/3.0;
 	}
-	Student(int no,String name,int kor,int eng,int math,
-			int total,double avg){
+	Student(int no,String name,int kor, int eng, int math,int total, double avg){
 		count--;
 		this.no = no;
 		this.name = name;
@@ -31,18 +33,17 @@ public class Student {
 		this.total = total;
 		this.avg = avg;
 	}
-	
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
-	}
 	public int getNo() {
 		return no;
 	}
-	public void setNo(int no) {
-		this.no = no;
+	public int setNo(int no) {
+		return no;
+	}
+	public static int getCount() {
+		return count;
+	}
+	public static void setCount(int count) {
+		Student.count = count;
 	}
 	public String getName() {
 		return name;
@@ -89,5 +90,6 @@ public class Student {
 	
 	
 	
-
+	
 }
+
